@@ -2,9 +2,9 @@
 
 ## Requirements
 
-- Python 3.8
+- Python (3.8+)
 - FastAPI
-- Elasticsearch
+- Elasticsearch (8.3.0+)
 
 ## Running Application
 

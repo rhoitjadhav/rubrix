@@ -15,14 +15,30 @@ class MetricsUsecase:
         self._dataset_index = dataset_index
 
     def _calculate_text_length_freq(self, text: str) -> Dict:
-        """"""
+        """
+        Calculate text length frequencies
+
+        Args:
+            text: sentence
+
+        Returns:
+            frequencies of text length
+        """
         words = nltk.word_tokenize(text)
         text_lengths = [len(w) for w in words]
 
         return dict(Counter(text_lengths))
 
     def _calculate_token_frequecies(self, text: str) -> Dict:
-        """"""
+        """
+        Calculate token frequecies
+
+        Args:
+            text: sentence
+
+        Returns:
+            frequencies of tokens
+        """
         words = nltk.word_tokenize(text)
         return dict(Counter(words))
 
@@ -32,6 +48,7 @@ class MetricsUsecase:
     ) -> ReturnValue:
         """
         Calculate token length distribution data
+
         Args:
             dataset_ids: list of dataset ids
 

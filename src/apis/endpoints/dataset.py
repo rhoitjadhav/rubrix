@@ -15,7 +15,8 @@ from config import (
 )
 
 hosts = [
-    f"http://{ELASTIC_USER}:{ELASTIC_PASSWORD}@{ELASTIC_HOST}:{ELASTIC_PORT}/"]
+    f"http://{ELASTIC_USER}:{ELASTIC_PASSWORD}@{ELASTIC_HOST}:{ELASTIC_PORT}/"
+]
 es_client = ElasticSearchInterface(hosts)
 dataset_usecase = DatasetUsecase(es_client, DATASET_INDEX)
 router = APIRouter()

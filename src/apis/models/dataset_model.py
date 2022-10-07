@@ -1,5 +1,4 @@
 # Packages
-import datetime
 from pydantic import BaseModel
 
 DATASET_INDEX = "dataset"
