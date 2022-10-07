@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: api
+  template:
+    metadata:
+      labels:
+        component: api
+    spec:
+      containers:
+        - name: api
+          image: test/api:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: ELASTIC_HOST
+              value: "localhost"
+            - name: ELASTIC_PORT
+              value: "9200"
+            - name: ELASTIC_USER
+              value: "elastic"
+            - name: ELASTIC_PASSWORD
+              value: "changeme"              
+          resources:
+            limits:
+              cpu: "1500m"
+              memory: "1.5Gi"
+            requests:
+              cpu: "500m"
+              memory: "0.5Gi"
