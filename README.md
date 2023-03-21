@@ -1,4 +1,4 @@
-# Rubrix-Challlenge
+# Rubrix
 
 ## Requirements
 
