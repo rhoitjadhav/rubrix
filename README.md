@@ -1,4 +1,4 @@
-# Rubrix
+# Rubrix API
 
 ## Requirements
 
